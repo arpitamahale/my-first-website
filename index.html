@@ -4,108 +4,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Arpita's Website</title>
+
     <style>
+        /* THEME VARIABLES */
+        :root {
+            --bg-color: #1a1919;
+            --text-color: white;
+            --box-color: #222;
+            --border-color: #555;
+        }
+
+        /* LIGHT THEME */
+        .light-theme {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --box-color: #f9f9f9;
+            --border-color: #ccc;
+        }
+
+        /* BASIC PAGE STYLE */
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f3f3f3;
+            font-family: Arial, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            transition: 0.3s;
         }
 
+        /* NAVBAR */
+        nav {
+            background: #333;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 12px;
+        }
+
+        nav a:hover {
+            background: #555;
+            border-radius: 5px;
+        }
+
+        /* HEADER */
         header {
-            background: #333;
-            color: white;
             padding: 20px;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            background: var(--bg-color);
+            align-items: center;
         }
 
-        section {
-            padding: 20px;
+        header h1 {
+            margin: 0;
         }
 
-        img {
-            width: 200px;
-            border-radius: 10px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-
-        th,
-        td {
-            padding: 10px;
-            text-align: left;
-        }
-
-        form {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 300px;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            margin-bottom: 10px;
-            padding: 8px;
-        }
-
-        button {
-            background: #333;
-            color: white;
-            padding: 10px;
+        #themeToggle {
+            background: #444;
             border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 6px;
             cursor: pointer;
         }
 
-        button:hover {
-            background: #555;
+        #themeToggle:hover {
+            opacity: 0.8;
+        }
+
+        /* CONTENT BOXES */
+        .content-box {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: var(--box-color);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        /* IMAGE */
+        img {
+            width: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 10px auto;
+            border: 3px solid var(--border-color);
+        }
+
+        /* SKILLS */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        ul li {
+            padding: 8px;
+            margin: 5px auto;
+            width: 60%;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* TABLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* FORM */
+        form input,
+        form textarea {
+            width: 100%;
+            background: var(--bg-color);
+            color: var(--text-color);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+        }
+
+        form button {
+            width: 100%;
+            background: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            opacity: 0.9;
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Welcome to My Personal Website</h1>
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- HEADER -->
+    <header id="home">
+        <h1>Arpita Mahale</h1>
+        <button id="themeToggle">☀️ Light Mode</button>
     </header>
 
     <!-- ABOUT SECTION -->
-    <section>
+    <div class="content-box" id="about" style="border: none; background: none; box-shadow: none;">
         <h2>About Me</h2>
-        <img src="https://via.placeholder.com/200" alt="My Photo">
-        <p>Hello! My name is <b>Arpita</b>. I am learning web development and building my online presence.</p>
-    </section>
+        <img src="C:\Users\arpit\OneDrive\Desktop\ALL Programs\WebDev\website building\sage pfp.jpg" alt="Profile">
+        <p style="text-align:center;">
+            Hello! My name is <b>Arpita</b>. I am learning web development and building my online presence.
+        </p>
+    </div>
 
-    <!-- SKILLS SECTION WITH UL -->
-    <section>
+
+    <!-- SKILLS SECTION -->
+    <div class="content-box" id="skills">
         <h2>My Skills</h2>
         <ul>
             <li>Python Programming</li>
             <li>HTML, CSS, JavaScript</li>
-            <li>AI and Automation Projects</li>
+            <li>AI & Automation Projects</li>
             <li>Problem Solving</li>
         </ul>
-    </section>
+    </div>
 
-    <!-- TABLE SECTION -->
-    <section>
-        <h2>Education Details</h2>
+    <!-- EDUCATION SECTION -->
+    <div class="content-box" id="education">
+        <h2>Education</h2>
+
         <table>
             <tr>
                 <th>Course</th>
-                <th>School/College</th>
+                <th>Institute</th>
                 <th>Year</th>
             </tr>
             <tr>
@@ -119,24 +220,41 @@
                 <td>2023</td>
             </tr>
         </table>
-    </section>
+    </div>
 
-    <!-- CONTACT FORM -->
-    <section>
+    <!-- CONTACT SECTION -->
+    <div class="content-box" id="contact">
         <h2>Contact Me</h2>
+
         <form>
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" placeholder="Enter your name">
+            <label>Your Name:</label>
+            <input type="text" placeholder="Enter your name">
 
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" placeholder="Enter your email">
+            <label>Your Email:</label>
+            <input type="email" placeholder="Enter your email">
 
-            <label for="message">Message:</label>
-            <textarea id="message" rows="4" placeholder="Write your message"></textarea>
+            <label>Your Message:</label>
+            <textarea rows="4" placeholder="Write your message"></textarea>
 
-            <button type="submit">Submit</button>
+            <button type="submit">Send</button>
         </form>
-    </section>
+    </div>
+
+    <!-- THEME TOGGLE SCRIPT -->
+    <script>
+        const toggleBtn = document.getElementById("themeToggle");
+        const body = document.body;
+
+        toggleBtn.addEventListener("click", () => {
+            body.classList.toggle("light-theme");
+
+            if (body.classList.contains("light-theme")) {
+                toggleBtn.textContent = "🌙 Dark Mode";
+            } else {
+                toggleBtn.textContent = "☀️ Light Mode";
+            }
+        });
+    </script>
 
 </body>
 
