@@ -12,7 +12,7 @@
             --bg-color: #1a1919;
             --text-color: white;
             --box-color: #222;
-            --border-color: #555;
+            --border-color: #000000;
         }
 
         /* LIGHT THEME */
@@ -38,7 +38,7 @@
             background: #333;
             padding: 10px;
             display: flex;
-            justify-content: space-around;
+            /* justify-content: space-around; */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -65,18 +65,20 @@
             align-items: center;
         }
 
-        header h1 {
-            margin: 0;
-        }
+        header {
+    padding: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background: var(--bg-color);
+    position: relative;
+}
 
-        #themeToggle {
-            background: #444;
-            border: none;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
+#themeToggle {
+    position: absolute;
+    right: 20px;
+}
+
 
         #themeToggle:hover {
             opacity: 0.8;
@@ -170,7 +172,7 @@
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
-        <a href="#projects">Projects</a>
+        
     </nav>
 
     <!-- HEADER -->
@@ -181,8 +183,8 @@
 
     <!-- ABOUT SECTION -->
     <div class="content-box" id="about" style="border: none; background: none; box-shadow: none;">
-        <h2>About Me</h2>
-        <img src="sage pfp.jpg" alt="Profile">
+        <h2></h2>
+        <img src="sage pfp.jpg" alt="Profile" style="align-content: center;">
         <p style="text-align:center;">
             Hello! My name is <b>Arpita</b>. I am learning web development and building my online presence.
         </p>
@@ -212,13 +214,13 @@
             </tr>
             <tr>
                 <td>B.Tech (Computer Engineering)</td>
-                <td>SPPU University</td>
+                <td>GCOERC</td>
                 <td>2023–2027</td>
             </tr>
             <tr>
                 <td>HSC</td>
-                <td>XYZ Junior College</td>
-                <td>2023</td>
+                <td>Swami Muktanand Junior College</td>
+                <td>2023-2024</td>
             </tr>
         </table>
     </div>
